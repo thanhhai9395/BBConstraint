@@ -6,14 +6,26 @@
 //
 
 import UIKit
+import BBConstraint
 
 class ViewController: UIViewController {
 
+    lazy var centerView: UIView = {
+        let vw = UIView()
+        vw.backgroundColor = .red
+        return vw
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupUI()
     }
 
+    private func setupUI() {
+        view.addSubview(centerView)
 
+        centerView.anchor(top: view.topAnchor, left: view.leftAnchor, paddingTop: 10, paddingLeft: 10)
+        centerView.centerInSuperview()
+    }
 }
 
