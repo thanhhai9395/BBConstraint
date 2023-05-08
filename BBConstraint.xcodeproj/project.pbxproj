@@ -17,6 +17,9 @@
 		9FAFA04E2A08BE0E00227931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAFA04C2A08BE0E00227931 /* Main.storyboard */; };
 		9FAFA0502A08BE1100227931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAFA04F2A08BE1100227931 /* Assets.xcassets */; };
 		9FAFA0532A08BE1100227931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAFA0512A08BE1100227931 /* LaunchScreen.storyboard */; };
+		9FAFA0592A08DD4E00227931 /* BBConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAFA0262A08BD4E00227931 /* BBConstraint.framework */; };
+		9FAFA05A2A08DD4E00227931 /* BBConstraint.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAFA0262A08BD4E00227931 /* BBConstraint.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FAFA05F2A08DE1E00227931 /* Constraint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFA05E2A08DE1E00227931 /* Constraint+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +30,28 @@
 			remoteGlobalIDString = 9FAFA0252A08BD4E00227931;
 			remoteInfo = BBConstraint;
 		};
+		9FAFA05B2A08DD4F00227931 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FAFA01D2A08BD4E00227931 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FAFA0252A08BD4E00227931;
+			remoteInfo = BBConstraint;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FAFA05D2A08DD4F00227931 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9FAFA05A2A08DD4E00227931 /* BBConstraint.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9FAFA0262A08BD4E00227931 /* BBConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +67,7 @@
 		9FAFA04F2A08BE1100227931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FAFA0522A08BE1100227931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FAFA0542A08BE1100227931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FAFA05E2A08DE1E00227931 /* Constraint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraint+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAFA0592A08DD4E00227931 /* BBConstraint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +104,7 @@
 				9FAFA0342A08BD4F00227931 /* BBConstraintTests */,
 				9FAFA0452A08BE0E00227931 /* BBConstraintExamples */,
 				9FAFA0272A08BD4E00227931 /* Products */,
+				9FAFA0582A08DD4E00227931 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +123,7 @@
 			children = (
 				9FAFA0292A08BD4E00227931 /* BBConstraint.h */,
 				9FAFA02A2A08BD4E00227931 /* BBConstraint.docc */,
+				9FAFA05E2A08DE1E00227931 /* Constraint+Ext.swift */,
 			);
 			path = BBConstraint;
 			sourceTree = "<group>";
@@ -120,6 +148,13 @@
 				9FAFA0542A08BE1100227931 /* Info.plist */,
 			);
 			path = BBConstraintExamples;
+			sourceTree = "<group>";
+		};
+		9FAFA0582A08DD4E00227931 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,10 +214,12 @@
 				9FAFA0402A08BE0E00227931 /* Sources */,
 				9FAFA0412A08BE0E00227931 /* Frameworks */,
 				9FAFA0422A08BE0E00227931 /* Resources */,
+				9FAFA05D2A08DD4F00227931 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9FAFA05C2A08DD4F00227931 /* PBXTargetDependency */,
 			);
 			name = BBConstraintExamples;
 			productName = BBConstraintExamples;
@@ -262,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAFA05F2A08DE1E00227931 /* Constraint+Ext.swift in Sources */,
 				9FAFA02B2A08BD4E00227931 /* BBConstraint.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +329,11 @@
 			isa = PBXTargetDependency;
 			target = 9FAFA0252A08BD4E00227931 /* BBConstraint */;
 			targetProxy = 9FAFA0322A08BD4F00227931 /* PBXContainerItemProxy */;
+		};
+		9FAFA05C2A08DD4F00227931 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FAFA0252A08BD4E00227931 /* BBConstraint */;
+			targetProxy = 9FAFA05B2A08DD4F00227931 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -493,6 +536,7 @@
 		9FAFA03E2A08BD4F00227931 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -509,6 +553,7 @@
 		9FAFA03F2A08BD4F00227931 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -525,6 +570,7 @@
 		9FAFA0562A08BE1100227931 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +598,7 @@
 		9FAFA0572A08BE1100227931 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
